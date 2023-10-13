@@ -1,0 +1,53 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: dodgerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    --fruit-size: 75px;
+}
+
+.backgrounded {
+    background: white;
+    box-shadow: 2px 2px #0003;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.counters {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    padding-bottom: 1em;
+}
+
+.counter-lives, .counter-score, .counter-time {
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-board {
+    width: 800px;
+    height: 600px;
+    position: relative;
+}
+
+.fruit {
+    width: var(--fruit-size);
+    height: var(--fruit-size);
+    position: absolute;
+}
+
+.player {
+    width: calc(var(--fruit-size) * 2.5);
+    height: var(--fruit-size);
+    position: absolute;
+    z-index: 1;
+    top: calc(600px - var(--fruit-size) - 50px);
+}
